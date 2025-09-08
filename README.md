@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crochet by DML – Handcrafted Elegance
 
 A modern, responsive portfolio website to showcase bespoke crochet designs, premium yarns, and custom handmade pieces crafted with love.
@@ -54,3 +55,7 @@ You can deploy this site on GitHub Pages, Netlify, Vercel, or any static hosting
 - [Three.js](https://threejs.org/) for background effects
 - [Font Awesome](https://fontawesome.com/) for icons
 - Designed and handcrafted by DML
+=======
+# crochetbydml
+A beautifully crafted, responsive  website with gallery for a crochet brand, featuring a Pinterest-style masonry layout, lightbox, category filtering, and dynamic image upload with local storage
+>>>>>>> 19f7da6a20abc5d1a3bcad9136b1c28f8d8a50e1
