@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crochet by DML - Handcrafted Elegance. Discover bespoke crochet designs, premium yarns, and custom handmade pieces crafted with love." />
+  <title>Crochet by DML - Handcrafted Elegance</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN for professional icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papmQw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw1Qn6Qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fallback Font Awesome CDN (jsDelivr) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Shared WebGL canvas -->
+  <canvas id="threejs-canvas"></canvas>
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content slide-in-left">
+          <h1 class="hero-title">Crochet by DML</h1>
+          <p class="hero-subtitle">"Crocheting elegance one stitch at a time"</p>
+          <p class="hero-description">
+            Transform your space with handcrafted masterpieces. Every thread tells a story, 
+            every stitch carries love, and every piece becomes a treasured memory.
+          </p>
+          <div class="cta-buttons">
+            <a href="gallery.html" class="btn btn-primary">🧶 View Collection</a>
+            <a href="#contact" class="btn btn-secondary">🎨 Start Creating</a>
+          </div>
+        </div>
+
+       
+      </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+   <section id="gallery" class="content-section gallery-preview">
+  <h2 class="section-title fade-in">Our Creations</h2>
+  <p class="section-intro fade-in">
+    Just a glimpse of what we’ve crafted with love. Explore our signature pieces — 
+    from fashion to home décor — then step into the full gallery of <strong> unique creations</strong>.
+  </p>
+
+  <div class="gallery-grid preview-grid">
+    <div class="gallery-item">
+      <img src="images/crochet1.jpg" alt="Crochet Dress" />
+      <div class="overlay">
+        <span class="badge">Clothing</span>
+        <h3 class="item-title">Elegant Crochet Dress</h3>
+        <p class="item-desc">Timeless, handmade fashion for every occasion.</p>
+        <a href="gallery.html" class="btn btn-light">View More</a>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="images/crochet2.jpg" alt="Crochet Bag" />
+      <div class="overlay">
+        <span class="badge">Accessories</span>
+        <h3 class="item-title">Handmade Tote Bag</h3>
+        <p class="item-desc">Carry elegance everywhere you go.</p>
+        <a href="gallery.html" class="btn btn-light">View More</a>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="images/crochet3.jpg" alt="Crochet Pillow" />
+      <div class="overlay">
+        <span class="badge">Home</span>
+        <h3 class="item-title">Cozy Pillow Set</h3>
+        <p class="item-desc">Perfect blend of comfort and style.</p>
+        <a href="gallery.html" class="btn btn-light">View More</a>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="images/crochet4.jpg" alt="Crochet Top" />
+      <div class="overlay">
+        <span class="badge">Clothing</span>
+        <h3 class="item-title">Summer Crochet Top</h3>
+        <p class="item-desc">Lightweight, breezy, and handmade with love.</p>
+        <a href="gallery.html" class="btn btn-light">View More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-cta fade-in">
+  <a href="gallery.html" class="btn btn-primary">🧶 Explore Full Gallery</a>
+  <a href="#contact" class="btn btn-secondary">🎨 Commission Custom Piece</a>
+  </div>
+</section>
+
+    <!-- About -->
+    <section id="about" class="content-section">
+  <h2 class="section-title fade-in">Crafted With Passion</h2>
+      <div class="features-grid">
+        <div class="feature-card slide-in-left">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Bespoke Designs</h3>
+          <p>Your vision, our craftsmanship. Every piece is uniquely yours.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌟</div>
+          <h3 class="feature-title">Premium Materials</h3>
+          <p>Only the finest yarns and threads for lasting beauty and comfort.</p>
+        </div>
+        <div class="feature-card slide-in-right">
+          <div class="feature-icon">💕</div>
+          <h3 class="feature-title">Love in Every Stitch</h3>
+          <p>Handcrafted with patience, precision, and pure passion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-section contact-section contact-narrative">
+      <div class="yarn-graphic">
+        <svg width="60" height="60" viewBox="0 0 60 60" class="yarn-ball-svg" aria-hidden="true">
+          <circle cx="30" cy="30" r="28" fill="#f8c6d0" stroke="#d46f77" stroke-width="3"/>
+          <path d="M18 30 Q30 10 42 30 Q30 50 18 30" fill="none" stroke="#d46f77" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="section-title fade-in" style="font-family: 'Dancing Script', cursive;">Let's Create Together</h2>
+      <form class="contact-form narrative-form fade-in" autocomplete="off">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="6" placeholder="Share your ideas, dreams, or custom project wishes..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary narrative-btn">Send Your Note</button>
+      </form>
+      <div class="yarn-thread-svg">
+        <svg width="6" height="120" viewBox="0 0 6 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 0 Q6 30 3 60 Q0 90 3 120" stroke="#d46f77" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="contact-alt fade-in">
+        <div class="alt-contact-methods">
+          <span class="alt-email"><i class="fa-solid fa-envelope"></i> crochyy.dml@gmail.com</span>
+        </div>
+        <div class="narrative-socials">
+          <a href="https://instagram.com/crochyy_dml_yarn_villa" class="narrative-social-icon" title="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:crochyy.dml@gmail.com" class="narrative-social-icon" title="Email" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+2347078157637" class="narrative-social-icon" title="Call" target="_blank">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <img src="" alt="" id="lightbox-image">
+    <button class="lightbox-next" id="lightbox-next">›</button>
+  </div>
+
+    <!-- Scripts -->
+
+  <script src="theme.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+
+  <!-- Inject navbar -->
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        // Now that navbar is loaded, let theme.js attach toggle logic
+        document.dispatchEvent(new Event("navbar-loaded"));
+      })
+      .catch(err => console.error("Navbar failed to load:", err));
+  </script>
+
+
+
+  <footer class="site-footer signature-footer">
+      <div class="footer-columns">
+        <!-- Brand & Tagline -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">🧶</div>
+          <div class="footer-title">Crochet by DML</div>
+          <div class="footer-tagline">Handcrafted with passion and patience.</div>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-col footer-links-col">
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Connect -->
+        <div class="footer-col footer-connect-col">
+          <div class="footer-heading">Join the Circle</div>
+          <div class="footer-socials">
+            <a href="https://instagram.com/crochyy_dml_yarn_villa" target="_blank" title="Instagram" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:crochyy.dml@gmail.com" target="_blank" title="Email" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <form class="footer-newsletter" autocomplete="off">
+            <input type="email" placeholder="Your email for cozy updates." aria-label="Newsletter Email" required />
+            <button type="submit" title="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-stitch-divider" aria-hidden="true"></div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Crochet by DML. All Rights Reserved.</span>
+        <span class="footer-legal-links">
+          <a href="#" class="footer-legal">Privacy Policy</a> &middot; <a href="#" class="footer-legal">Terms of Service</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

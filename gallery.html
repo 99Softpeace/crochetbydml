@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Gallery - Crochet by DML</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Shared WebGL canvas (stars/clouds background) -->
+  <canvas id="threejs-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-3d">🧶</div>
+        <span>Crochet by DML</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn btn-secondary">🌙</button>
+        <button id="menu-toggle" class="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section">
+      <div class="section-header">
+        <h2 class="section-title fade-in">Our Crochet Gallery</h2>
+        <p class="section-intro fade-in">
+          A curated collection of handmade crochet designs — crafted with passion, precision, and love.  
+          Browse by category or simply enjoy the artistry!
+        </p>
+      </div> 
+
+      <!-- Category Filter (optional, can hook with JS later) -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="clothing">Clothing</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="full-gallery">
+        <!-- Item 1: crochet1.jpg -->
+        <div class="gallery-item" data-category="clothing">
+          <img src="images/crochet1.jpg" alt="Elegant Sun Hat" />
+          <div class="overlay">
+            <span class="badge">Clothing</span>
+            <h3 class="item-title">Elegant Sun Hat</h3>
+            <p class="item-desc">A stylish hat for sunny days and chic outings.</p>
+          </div>
+        </div>
+
+        <!-- Item 2: crochet2.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet2.jpg" alt="Tote Bag" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Tote Bag</h3>
+            <p class="item-desc">Spacious and sturdy, perfect for everyday use.</p>
+          </div>
+        </div>
+
+        <!-- Item 3: crochet3.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet3.jpg" alt="Phone Pouch" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Phone Pouch</h3>
+            <p class="item-desc">Keep your phone safe and stylish on the go.</p>
+          </div>
+        </div>
+
+        <!-- Item 4: crochet4.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet4.jpg" alt="Phone Pouch" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Phone Pouch</h3>
+            <p class="item-desc">Handy and protective, fits most phones.</p>
+          </div>
+        </div>
+
+        <!-- Item 5: crochet5.jpg -->
+        <div class="gallery-item" data-category="clothing">
+          <img src="images/crochet5.jpg" alt="Hat & Yarn Ball" />
+          <div class="overlay">
+            <span class="badge">Clothing</span>
+            <h3 class="item-title">Cozy Hat & Yarn</h3>
+            <p class="item-desc">A warm hat, perfect for winter, with a touch of craft.</p>
+          </div>
+        </div>
+
+        <!-- Item 6: crochet6.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet6.jpg" alt="Floral Bag" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Floral Bag</h3>
+            <p class="item-desc">A beautiful bag adorned with flower designs.</p>
+          </div>
+        </div>
+
+        <!-- Item 7: crochet7.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet7.jpg" alt="Choco Brown Bag" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Choco Brown Bag</h3>
+            <p class="item-desc">A rich brown bag, perfect for any occasion.</p>
+          </div>
+        </div>
+
+        <!-- Item 8: crochet8.jpg -->
+        <div class="gallery-item" data-category="accessories">
+          <img src="images/crochet8.jpg" alt="Smiley Cream Bag" />
+          <div class="overlay">
+            <span class="badge">Accessories</span>
+            <h3 class="item-title">Smiley Cream Bag</h3>
+            <p class="item-desc">A cream-colored bag with a cheerful smiley face.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <img src="" alt="" id="lightbox-image">
+    <button class="lightbox-next" id="lightbox-next">›</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+  <script src="theme.js"></script>
+  <script>
+    // Fallback: Ensure fade-in always works on mobile/inspect
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+          if (!el.classList.contains('visible')) {
+            el.classList.add('visible');
+          }
+        });
+      }, 1000);
+    });
+  </script>
+  <script>
+    // Hamburger menu logic for static navbar (gallery page)
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+      }
+      // Close menu on link click (mobile UX)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          if (menuToggle.classList.contains('active')) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+<footer class="site-footer signature-footer">
+    <div class="footer-columns">
+      <!-- Brand & Tagline -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo">🧶</div>
+        <div class="footer-title">Crochet by DML</div>
+        <div class="footer-tagline">Handcrafted with passion and patience.</div>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-col footer-links-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Connect -->
+      <div class="footer-col footer-connect-col">
+        <div class="footer-heading">Join the Circle</div>
+        <div class="footer-socials">
+          <a href="https://instagram.com/crochyy_dml_yarn_villa" target="_blank" title="Instagram" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:crochyy.dml@gmail.com" target="_blank" title="Email" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <form class="footer-newsletter" autocomplete="off">
+          <input type="email" placeholder="Your email for cozy updates." aria-label="Newsletter Email" required />
+          <button type="submit" title="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-stitch-divider" aria-hidden="true"></div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Crochet by DML. All Rights Reserved.</span>
+      <span class="footer-legal-links">
+        <a href="#" class="footer-legal">Privacy Policy</a> &middot; <a href="#" class="footer-legal">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+</html>
