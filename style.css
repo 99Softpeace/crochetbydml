@@ -504,9 +504,9 @@ body.dark-mode .narrative-social-icon:hover i {
 }
 @media (max-width: 600px) {
   .contact-narrative {
-    max-width: 99vw;
-    padding: 2.2rem 0.2rem 1.5rem 0.2rem;
-    border-radius: 16px;
+  max-width: 99vw;
+  padding: 2.2rem 0.6rem 1.5rem 0.6rem; /* give symmetric padding to avoid right-shift */
+  border-radius: 16px;
   }
   .narrative-form {
     padding: 0;
@@ -1625,7 +1625,7 @@ body.dark-mode .nav-links {
     .contact-form, .contact-socials {
       max-width: 100%;
       min-width: 0;
-      margin: 0 auto;
+    margin: 0 auto;
       border-radius: 10px;
       box-shadow: none;
       border: 1.5px solid #f3e3e0;
@@ -1640,6 +1640,21 @@ body.dark-mode .nav-links {
       border: none;
       box-shadow: none;
     }
+  }
+}
+
+/* Ensure contact section and form are centered on very small screens and remove any stray right offset */
+@media (max-width: 480px) {
+  .contact-narrative, .contact-form, .contact-flex, .contact-socials {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    width: calc(100% - 1.2rem) !important;
+    box-sizing: border-box;
   }
 }
 
